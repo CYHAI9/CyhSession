@@ -12,11 +12,12 @@
 		8F3D40EA1D4A01DB0086D3ED /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3D40E91D4A01DB0086D3ED /* ViewController.m */; };
 		8F3D40EF1D4A01DB0086D3ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F3D40EE1D4A01DB0086D3ED /* Assets.xcassets */; };
 		8F3D40F21D4A01DB0086D3ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F3D40F01D4A01DB0086D3ED /* LaunchScreen.storyboard */; };
-		8F3D40FC1D4A02310086D3ED /* Cyhsession.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3D40FB1D4A02310086D3ED /* Cyhsession.m */; };
 		8F3D40FE1D4A060A0086D3ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F3D40FD1D4A060A0086D3ED /* Main.storyboard */; };
+		9DD84BA9BE3BA70C81CF35B9 /* libPods-CyhSessionExamp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BCE1E3CDA4D8B3D6AC5FE365 /* libPods-CyhSessionExamp.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		469F80CCA66F262C943052CC /* Pods-CyhSessionExamp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CyhSessionExamp.debug.xcconfig"; path = "Target Support Files/Pods-CyhSessionExamp/Pods-CyhSessionExamp.debug.xcconfig"; sourceTree = "<group>"; };
 		8F3D40DF1D4A01DB0086D3ED /* CyhSessionExamp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CyhSessionExamp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F3D40E31D4A01DB0086D3ED /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8F3D40E51D4A01DB0086D3ED /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -26,9 +27,9 @@
 		8F3D40EE1D4A01DB0086D3ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8F3D40F11D4A01DB0086D3ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8F3D40F31D4A01DB0086D3ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8F3D40FA1D4A02310086D3ED /* Cyhsession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cyhsession.h; sourceTree = "<group>"; };
-		8F3D40FB1D4A02310086D3ED /* Cyhsession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cyhsession.m; sourceTree = "<group>"; };
 		8F3D40FD1D4A060A0086D3ED /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		BCE1E3CDA4D8B3D6AC5FE365 /* libPods-CyhSessionExamp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CyhSessionExamp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA8D26DE7C05C2BE6DFA50D9 /* Pods-CyhSessionExamp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CyhSessionExamp.release.xcconfig"; path = "Target Support Files/Pods-CyhSessionExamp/Pods-CyhSessionExamp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DD84BA9BE3BA70C81CF35B9 /* libPods-CyhSessionExamp.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,6 +49,8 @@
 			children = (
 				8F3D40E11D4A01DB0086D3ED /* CyhSessionExamp */,
 				8F3D40E01D4A01DB0086D3ED /* Products */,
+				B8A055F73BC90B1EE036E361 /* Pods */,
+				F2E1E9DB2856A234660AD67C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -61,7 +65,6 @@
 		8F3D40E11D4A01DB0086D3ED /* CyhSessionExamp */ = {
 			isa = PBXGroup;
 			children = (
-				8F3D40F91D4A02310086D3ED /* CyhSession */,
 				8F3D40E51D4A01DB0086D3ED /* AppDelegate.h */,
 				8F3D40E61D4A01DB0086D3ED /* AppDelegate.m */,
 				8F3D40E81D4A01DB0086D3ED /* ViewController.h */,
@@ -83,13 +86,21 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		8F3D40F91D4A02310086D3ED /* CyhSession */ = {
+		B8A055F73BC90B1EE036E361 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				8F3D40FA1D4A02310086D3ED /* Cyhsession.h */,
-				8F3D40FB1D4A02310086D3ED /* Cyhsession.m */,
+				469F80CCA66F262C943052CC /* Pods-CyhSessionExamp.debug.xcconfig */,
+				EA8D26DE7C05C2BE6DFA50D9 /* Pods-CyhSessionExamp.release.xcconfig */,
 			);
-			path = CyhSession;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F2E1E9DB2856A234660AD67C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BCE1E3CDA4D8B3D6AC5FE365 /* libPods-CyhSessionExamp.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -99,6 +110,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8F3D40F61D4A01DB0086D3ED /* Build configuration list for PBXNativeTarget "CyhSessionExamp" */;
 			buildPhases = (
+				089F688079F084C845A7351A /* [CP] Check Pods Manifest.lock */,
 				8F3D40DB1D4A01DB0086D3ED /* Sources */,
 				8F3D40DC1D4A01DB0086D3ED /* Frameworks */,
 				8F3D40DD1D4A01DB0086D3ED /* Resources */,
@@ -131,6 +143,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -157,6 +170,31 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		089F688079F084C845A7351A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CyhSessionExamp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8F3D40DB1D4A01DB0086D3ED /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -165,7 +203,6 @@
 				8F3D40EA1D4A01DB0086D3ED /* ViewController.m in Sources */,
 				8F3D40E71D4A01DB0086D3ED /* AppDelegate.m in Sources */,
 				8F3D40E41D4A01DB0086D3ED /* main.m in Sources */,
-				8F3D40FC1D4A02310086D3ED /* Cyhsession.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,9 +302,11 @@
 		};
 		8F3D40F71D4A01DB0086D3ED /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 469F80CCA66F262C943052CC /* Pods-CyhSessionExamp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CyhSessionExamp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = WeiSheLi.CyhSessionExamp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -276,9 +315,11 @@
 		};
 		8F3D40F81D4A01DB0086D3ED /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EA8D26DE7C05C2BE6DFA50D9 /* Pods-CyhSessionExamp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CyhSessionExamp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = WeiSheLi.CyhSessionExamp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -304,6 +345,7 @@
 				8F3D40F81D4A01DB0086D3ED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -133,27 +133,31 @@ static NSURLSession * _session;
     
 }
 
-- (void)sessionDownload:(NSString *)url DownloadPath:(NSString *)path SuccessSavePath:(sessiondown)Savepath
+- (void)sessionDownload:(NSString *)url DownloadPath:(NSString *)path SuccessSavePath:(sessiondown)Savepath Fail:(void(^)(NSError * error))failError
 {
     NSURL * URL = [NSURL URLWithString:url] ;
     NSURLSessionDownloadTask *task = [[self shareSession] downloadTaskWithURL:URL completionHandler:^(NSURL *location, NSURLResponse *response, NSError *error) {
         // location是沙盒中tmp文件夹下的一个临时url,文件下载后会存到这个位置,由于tmp中的文件随时可能被删除,所以我们需要自己需要把下载的文件挪到需要的地方
-        
-        if (path == nil) {
+        if (error) {
             
-            NSString *path = [[NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:response.suggestedFilename];
-            // 剪切文件
-            [[NSFileManager defaultManager] moveItemAtURL:location toURL:[NSURL fileURLWithPath:path] error:nil];
-            Savepath(path);
+            failError?failError(error):nil;
         }
-        else
-        {
-            
-            // 剪切文件
-            [[NSFileManager defaultManager] moveItemAtURL:location toURL:[NSURL fileURLWithPath:path] error:nil];
-            Savepath(path);
+        else{
+            if (path == nil) {
+                
+                NSString *path = [[NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:response.suggestedFilename];
+                // 剪切文件
+                [[NSFileManager defaultManager] moveItemAtURL:location toURL:[NSURL fileURLWithPath:path] error:nil];
+                Savepath(path);
+            }
+            else
+            {
+                
+                // 剪切文件
+                [[NSFileManager defaultManager] moveItemAtURL:location toURL:[NSURL fileURLWithPath:path] error:nil];
+                Savepath(path);
+            }
         }
-        
         
     }];
     // 启动任务

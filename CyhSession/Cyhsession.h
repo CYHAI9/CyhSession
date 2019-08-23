@@ -76,7 +76,7 @@ typedef void(^sessionfailupload)(NSError * error);
  *  @param path     存放路径
  *  @param Savepath 成功返回路径
  */
-- (void)sessionDownload:(NSString *)url DownloadPath:(NSString *)path SuccessSavePath:(sessiondown)Savepath;
+- (void)sessionDownload:(NSString *)url DownloadPath:(NSString *)path SuccessSavePath:(sessiondown)Savepath Fail:(void(^)(NSError * error))failError;
 /**
  *  提交，向服务器提交数据或文件
  *
