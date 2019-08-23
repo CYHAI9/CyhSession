@@ -8,13 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
-typedef void(^sessionpost)(NSData *);
-typedef void(^sessionfailpost)(NSError *);
-typedef void(^sessionget)(NSData *);
-typedef void(^sessionfailget)(NSError *);
-typedef void(^sessiondown)(NSString *);
-typedef void(^sessionupload)(NSData *);
-typedef void(^sessionfailupload)(NSError *);
+typedef void(^sessionpost)(NSData * data);
+typedef void(^sessionfailpost)(NSError * error);
+typedef void(^sessionget)(NSData * data);
+typedef void(^sessionfailget)(NSError * error);
+typedef void(^sessiondown)(NSString * path);
+typedef void(^sessionupload)(NSData * data);
+typedef void(^sessionfailupload)(NSError * error);
 
 /**
  *  断点续传协议
@@ -58,8 +58,9 @@ typedef void(^sessionfailupload)(NSError *);
  *  @param responseobjct 请求回来的数据
  *  @param failerror     错误提示
  */
-+(void)sessionPOST:(NSString *)url postPram:(id)postPram HTTPHeader:(NSDictionary *)header  Success:(sessionpost)responseobjct failer:
+-(void)sessionPOST:(NSString *)url postPram:(NSDictionary *)postPram HTTPHeader:(NSDictionary *)header  Success:(sessionpost)responseobjct failer:
 (sessionfailpost)failerror;
+
 /**
  *  GET请求
  *
@@ -67,7 +68,7 @@ typedef void(^sessionfailupload)(NSError *);
  *  @param responseobjct 请求回来的数据
  *  @param failerror     错误提示
  */
-+(void)sessionGET:(NSString *)url Success:(sessionget)responseobjct failer:(sessionfailget)failerror;
+-(void)sessionGET:(NSString *)url Param:(NSDictionary *)param Success:(sessionget)responseobjct failer:(sessionfailget)failerror;
 /**
  *  下载，非断点续传，普通下载
  *
@@ -75,7 +76,7 @@ typedef void(^sessionfailupload)(NSError *);
  *  @param path     存放路径
  *  @param Savepath 成功返回路径
  */
-+ (void)sessionDownload:(NSString *)url DownloadPath:(NSString *)path SuccessSavePath:(sessiondown)Savepath;
+- (void)sessionDownload:(NSString *)url DownloadPath:(NSString *)path SuccessSavePath:(sessiondown)Savepath;
 /**
  *  提交，向服务器提交数据或文件
  *
@@ -86,9 +87,9 @@ typedef void(^sessionfailupload)(NSError *);
  *  @param responseobjct 成功的回复数据
  *  @param failerror     错误提示
  */
-+ (void)sessionUpload:(NSString *)url HTTPHeader:(NSDictionary *)header fromFile:(NSURL *)filename fromData:(NSData *)bodydata  Success:(sessionupload)responseobjct failer:(sessionfailupload)failerror;
+- (void)sessionUpload:(NSString *)url HTTPHeader:(NSDictionary *)header fromFile:(NSURL *)filename fromData:(NSDictionary *)Param Success:(sessionupload)responseobjct failer:(sessionfailupload)failerror;
 
-+ (Cyhsession *)download;
++ (Cyhsession *)sessionManager;
 /**
  *  开始下载
  *

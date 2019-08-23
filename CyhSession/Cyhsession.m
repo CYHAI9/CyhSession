@@ -17,18 +17,34 @@
 @end
 
 static Cyhsession * cyhmanager;
+static NSURLSession * _session;
 @implementation Cyhsession
 
-+(void)sessionPOST:(NSString *)url postPram:(id)postPram HTTPHeader:(NSDictionary *)header  Success:(sessionpost)responseobjct failer:
+- (NSURLSession *)shareSession
+{
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        
+        NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
+        NSURLSession * session = [NSURLSession sessionWithConfiguration:configuration];
+        _session = session;
+    });
+    return _session;
+}
+
+-(void)sessionPOST:(NSString *)url postPram:(NSDictionary *)postPram HTTPHeader:(NSDictionary *)header  Success:(sessionpost)responseobjct failer:
 (sessionfailpost)failerror
 {
-    NSString * postPramstr =[NSString stringWithFormat:@"%@",postPram];
+    NSMutableArray * params = [NSMutableArray new];
+    for (NSString * key in postPram) {
+        NSString * paramStr = [NSString stringWithFormat:@"%@=%@",key,postPram[key]];
+        [params addObject:paramStr];
+    }
+    NSString * ParamString = [params componentsJoinedByString:@"&"];
+     NSData * postData = [ParamString dataUsingEncoding:NSUTF8StringEncoding];
+    
     NSString * URLString = url;
     NSURL * URL = [NSURL URLWithString:URLString];
-    
-    NSString * postString = postPramstr;
-    NSData * postData = [postString dataUsingEncoding:NSUTF8StringEncoding];  //将请求参数字符串转成NSData类型
-    
     NSMutableURLRequest * request = [[NSMutableURLRequest alloc]init];
     [request setHTTPMethod:@"POST"]; //指定请求方式
     [request setURL:URL]; //设置请求的地址
@@ -41,10 +57,8 @@ static Cyhsession * cyhmanager;
         }
     }
     
-    NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
-    NSURLSession * session = [NSURLSession sessionWithConfiguration:configuration];
     dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
-    NSURLSessionDataTask * task = [session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+    NSURLSessionDataTask * task = [[self shareSession] dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         
         if (data) {
             
@@ -65,27 +79,30 @@ static Cyhsession * cyhmanager;
     
 }
 
-+(void)sessionGET:(NSString *)url Success:(sessionget)responseobjct failer:(sessionfailget)failerror
+-(void)sessionGET:(NSString *)url Param:(NSDictionary *)param Success:(sessionget)responseobjct failer:(sessionfailget)failerror
 {
-    NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
-    NSURLSession * session = [NSURLSession sessionWithConfiguration:configuration];
     NSString * URLString = url;
-    NSURL * URL = [NSURL URLWithString:URLString];
-    //    NSMutableURLRequest * request = [[NSMutableURLRequest alloc]init];
-    //    NSString * postPramstr =[NSString stringWithFormat:@"%@",postPram];
-    //    NSString * postString = postPramstr;
-    //    NSData * postData = [postString dataUsingEncoding:NSUTF8StringEncoding];
-    //    [request setURL:URL]; //设置请求的地址
-    //    [request setHTTPBody:postData];  //设置请求的参数
-    //    [request setTimeoutInterval:30];
-    //    [request setCachePolicy:1];
+    NSMutableArray * params = [NSMutableArray new];
+    for (NSString * key in param) {
+        NSString * paramStr = [NSString stringWithFormat:@"%@=%@",key,param[key]];
+        [params addObject:paramStr];
+    }
+    NSString * ParamString = [params componentsJoinedByString:@"&"];
     
+    if (params.count > 0) {
+        URLString = [NSString stringWithFormat:@"%@?%@",URLString,ParamString];
+    }
+    NSURL * URL = [NSURL URLWithString:URLString];
+
+    NSMutableURLRequest * request = [[NSMutableURLRequest alloc]init];
+    [request setURL:URL]; //设置请求的地址
+    [request setTimeoutInterval:30];
+    [request setCachePolicy:1];
+    [request setHTTPMethod:@"GET"]; //指定请求方式
+
     dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
-    NSURLSessionTask * task = [session dataTaskWithURL:URL completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-        
+    NSURLSessionTask * task = [[self shareSession] dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         if (data) {
-            
-            NSLog(@"data:%@",data);
             
             responseobjct(data);
         }
@@ -96,18 +113,30 @@ static Cyhsession * cyhmanager;
         dispatch_semaphore_signal(semaphore);
     }];
     
+//    dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
+//    NSURLSessionTask * task = [[self shareSession] dataTaskWithURL:URL completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+//
+//        if (data) {
+//
+//            responseobjct(data);
+//        }
+//        else
+//        {
+//            failerror(error);
+//        }
+//        dispatch_semaphore_signal(semaphore);
+//    }];
+    
     
     [task resume];
     dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
     
 }
 
-+ (void)sessionDownload:(NSString *)url DownloadPath:(NSString *)path SuccessSavePath:(sessiondown)Savepath
+- (void)sessionDownload:(NSString *)url DownloadPath:(NSString *)path SuccessSavePath:(sessiondown)Savepath
 {
-    NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
-    NSURLSession * session = [NSURLSession sessionWithConfiguration:configuration];
     NSURL * URL = [NSURL URLWithString:url] ;
-    NSURLSessionDownloadTask *task = [session downloadTaskWithURL:URL completionHandler:^(NSURL *location, NSURLResponse *response, NSError *error) {
+    NSURLSessionDownloadTask *task = [[self shareSession] downloadTaskWithURL:URL completionHandler:^(NSURL *location, NSURLResponse *response, NSError *error) {
         // location是沙盒中tmp文件夹下的一个临时url,文件下载后会存到这个位置,由于tmp中的文件随时可能被删除,所以我们需要自己需要把下载的文件挪到需要的地方
         
         if (path == nil) {
@@ -131,7 +160,7 @@ static Cyhsession * cyhmanager;
     [task resume];
 }
 
-+ (void)sessionUpload:(NSString *)url HTTPHeader:(NSDictionary *)header fromFile:(NSURL *)filename fromData:(NSData *)bodydata  Success:(sessionupload)responseobjct failer:(sessionfailupload)failerror
+-(void)sessionUpload:(NSString *)url HTTPHeader:(NSDictionary *)header fromFile:(NSURL *)filename fromData:(NSDictionary *)Param Success:(sessionupload)responseobjct failer:(sessionfailupload)failerror
 {
     
     NSMutableURLRequest * request = [[NSMutableURLRequest alloc]init];
@@ -146,12 +175,19 @@ static Cyhsession * cyhmanager;
             [request setValue:header[key] forHTTPHeaderField:key];
         }
     }
-    
-    NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
-    NSURLSession * session = [NSURLSession sessionWithConfiguration:configuration];
-    if (bodydata != nil) {
+  
+    if (Param != nil) {
+        
+        NSMutableArray * params = [NSMutableArray new];
+        for (NSString * key in Param) {
+            NSString * paramStr = [NSString stringWithFormat:@"%@=%@",key,Param[key]];
+            [params addObject:paramStr];
+        }
+        NSString * ParamString = [params componentsJoinedByString:@"&"];
+        NSData * postData = [ParamString dataUsingEncoding:NSUTF8StringEncoding];
+        
         [request setHTTPMethod:@"POST"]; //指定请求方式
-        NSURLSessionUploadTask *task = [session uploadTaskWithRequest:request fromData:bodydata completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        NSURLSessionUploadTask *task = [[self shareSession] uploadTaskWithRequest:request fromData:postData completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
             
             if (data) {
                 
@@ -169,7 +205,7 @@ static Cyhsession * cyhmanager;
     else if(filename != nil){
         
         NSURLSessionUploadTask *task =
-        [session uploadTaskWithRequest:request fromFile:filename completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+        [[self shareSession] uploadTaskWithRequest:request fromFile:filename completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
             
             if (data) {
                 
@@ -189,7 +225,7 @@ static Cyhsession * cyhmanager;
     }
 }
 
-+ (Cyhsession *)download
++ (Cyhsession *)sessionManager
 {
     static dispatch_once_t oneToken;
     
@@ -201,7 +237,6 @@ static Cyhsession * cyhmanager;
     return cyhmanager;
     
 }
-
 
 - (NSURLSession *)downloadSession
 {

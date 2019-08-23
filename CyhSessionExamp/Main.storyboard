@@ -1,7 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -13,12 +18,12 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gfp-eG-U4t">
                                 <rect key="frame" x="87" y="81" width="166" height="66"/>
-                                <color key="backgroundColor" red="1" green="0.90531427190000002" blue="0.82885470900000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="1" green="0.90531427190000002" blue="0.82885470900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Post"/>
                                 <connections>
@@ -27,7 +32,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fhQ-rW-ryh">
                                 <rect key="frame" x="87" y="177" width="166" height="66"/>
-                                <color key="backgroundColor" red="1" green="0.90531427190000002" blue="0.82885470900000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="1" green="0.90531427190000002" blue="0.82885470900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Get"/>
                                 <connections>
@@ -36,7 +41,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l1w-1o-djD">
                                 <rect key="frame" x="87" y="272" width="166" height="66"/>
-                                <color key="backgroundColor" red="1" green="0.90531427190000002" blue="0.82885470900000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="1" green="0.90531427190000002" blue="0.82885470900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Download"/>
                                 <connections>
@@ -45,7 +50,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eP2-aX-5OI">
                                 <rect key="frame" x="87" y="362" width="166" height="66"/>
-                                <color key="backgroundColor" red="1" green="0.90531427190000002" blue="0.82885470900000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="1" green="0.90531427190000002" blue="0.82885470900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Upload"/>
                                 <connections>
@@ -59,19 +64,19 @@
                                 </connections>
                             </switch>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="eP2-aX-5OI" firstAttribute="top" secondItem="l1w-1o-djD" secondAttribute="bottom" constant="24" id="0oQ-KW-PE4"/>
                             <constraint firstItem="eP2-aX-5OI" firstAttribute="width" secondItem="l1w-1o-djD" secondAttribute="width" id="34m-iu-c9g"/>
                             <constraint firstItem="fhQ-rW-ryh" firstAttribute="width" secondItem="Gfp-eG-U4t" secondAttribute="width" id="58k-Of-OJY"/>
-                            <constraint firstItem="Gfp-eG-U4t" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-170" id="858-CB-pya"/>
-                            <constraint firstItem="Gfp-eG-U4t" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" constant="-502" id="9YT-Ec-GJv"/>
+                            <constraint firstItem="Gfp-eG-U4t" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-334" id="858-CB-pya"/>
+                            <constraint firstItem="Gfp-eG-U4t" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" constant="-830" id="9YT-Ec-GJv"/>
                             <constraint firstItem="sGt-rE-zXJ" firstAttribute="top" secondItem="eP2-aX-5OI" secondAttribute="bottom" constant="27" id="DFa-CJ-WD9"/>
                             <constraint firstItem="eP2-aX-5OI" firstAttribute="centerX" secondItem="l1w-1o-djD" secondAttribute="centerX" id="HZU-Ju-g0u"/>
                             <constraint firstItem="l1w-1o-djD" firstAttribute="centerX" secondItem="fhQ-rW-ryh" secondAttribute="centerX" id="Imj-nk-ELL"/>
                             <constraint firstItem="eP2-aX-5OI" firstAttribute="height" secondItem="l1w-1o-djD" secondAttribute="height" id="PRN-aI-Htq"/>
-                            <constraint firstItem="Gfp-eG-U4t" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="10" id="QjA-aR-IKS"/>
-                            <constraint firstItem="Gfp-eG-U4t" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" constant="-154" id="bSl-qL-Bse"/>
+                            <constraint firstItem="Gfp-eG-U4t" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-37" id="QjA-aR-IKS"/>
+                            <constraint firstItem="Gfp-eG-U4t" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" constant="-248" id="bSl-qL-Bse"/>
                             <constraint firstItem="fhQ-rW-ryh" firstAttribute="height" secondItem="Gfp-eG-U4t" secondAttribute="height" id="bs2-PK-sTc"/>
                             <constraint firstItem="l1w-1o-djD" firstAttribute="top" secondItem="fhQ-rW-ryh" secondAttribute="bottom" constant="29" id="n5I-97-Axm"/>
                             <constraint firstItem="fhQ-rW-ryh" firstAttribute="centerX" secondItem="Gfp-eG-U4t" secondAttribute="centerX" id="p4n-Gs-ekg"/>
@@ -81,7 +86,6 @@
                             <constraint firstItem="l1w-1o-djD" firstAttribute="height" secondItem="fhQ-rW-ryh" secondAttribute="height" id="y1h-Fs-bW3"/>
                         </constraints>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="downSwitch" destination="sGt-rE-zXJ" id="pFi-ac-taQ"/>
                     </connections>
