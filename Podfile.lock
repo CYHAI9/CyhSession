@@ -1,3 +1,16 @@
-PODFILE CHECKSUM: 8f10df483349920bb920203b9ef718442efe26f7
+PODS:
+  - CyhSession (0.0.3)
+
+DEPENDENCIES:
+  - CyhSession
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - CyhSession
+
+SPEC CHECKSUMS:
+  CyhSession: d98dca951cde14c32b6bc50c642419b1231405cc
+
+PODFILE CHECKSUM: c239cf2f5769933cfff912f3fe5d01c98252073b
 
 COCOAPODS: 1.6.1

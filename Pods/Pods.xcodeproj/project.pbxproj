@@ -7,21 +7,47 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C2476B6ED88C5211D83642EB354C4F0B /* Pods-CyhSessionExamp-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BC615F50BB621F31968FC9D45B93A90E /* Pods-CyhSessionExamp-dummy.m */; };
+		04055DA50856247E926CB11A0186482C /* Pods-CyhSessionExamp-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BC615F50BB621F31968FC9D45B93A90E /* Pods-CyhSessionExamp-dummy.m */; };
+		5744B01CA95CC07DFFAB8FD5E63FC13F /* Cyhsession.m in Sources */ = {isa = PBXBuildFile; fileRef = 6693A6002D4C462929CE96829A93E8A0 /* Cyhsession.m */; };
+		B2B194FBE3DDD52A2B7E7BFCDDE71A90 /* CyhSession-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2793AEA831E62F96AA8532617DDEFB7E /* CyhSession-dummy.m */; };
+		C66967A918411546B2CD3B84F4C152DA /* Cyhsession.h in Headers */ = {isa = PBXBuildFile; fileRef = D9F5544BAEFE0F845037EBF833110B39 /* Cyhsession.h */; settings = {ATTRIBUTES = (Project, ); }; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		F16BF85CA018713E3A307A3FA83D4BEB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 661E120D8BDECE8FBA9A97968F48C23B;
+			remoteInfo = CyhSession;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		2793AEA831E62F96AA8532617DDEFB7E /* CyhSession-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CyhSession-dummy.m"; sourceTree = "<group>"; };
+		6693A6002D4C462929CE96829A93E8A0 /* Cyhsession.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = Cyhsession.m; path = CyhSession/Cyhsession.m; sourceTree = "<group>"; };
+		68809FB0FA60B75802333706C32B7291 /* CyhSession.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CyhSession.xcconfig; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9DFB174354B8B4B403A85046DA94958C /* Pods-CyhSessionExamp-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CyhSessionExamp-acknowledgements.markdown"; sourceTree = "<group>"; };
-		B9D3BF5CE5557CB0968CA85518671DAD /* libPods-CyhSessionExamp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-CyhSessionExamp.a"; path = "libPods-CyhSessionExamp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BBDE3B08B59633B006A8AB014DDDC98E /* libPods-CyhSessionExamp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-CyhSessionExamp.a"; path = "libPods-CyhSessionExamp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC615F50BB621F31968FC9D45B93A90E /* Pods-CyhSessionExamp-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CyhSessionExamp-dummy.m"; sourceTree = "<group>"; };
 		C2839CA9D3438C2A3589B4D5A9E4F0F9 /* Pods-CyhSessionExamp-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CyhSessionExamp-acknowledgements.plist"; sourceTree = "<group>"; };
 		D45FE5FE4E091A4ADED4D0155A70A880 /* Pods-CyhSessionExamp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CyhSessionExamp.release.xcconfig"; sourceTree = "<group>"; };
+		D9F5544BAEFE0F845037EBF833110B39 /* Cyhsession.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Cyhsession.h; path = CyhSession/Cyhsession.h; sourceTree = "<group>"; };
+		DE0F9A90916C9E29B4C97BA640FA825C /* libCyhSession.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libCyhSession.a; path = libCyhSession.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF67D617CF05346F00745D969A77E83F /* Pods-CyhSessionExamp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CyhSessionExamp.debug.xcconfig"; sourceTree = "<group>"; };
+		F647650B8E5F812C20952594875BC49B /* CyhSession-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CyhSession-prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		DD6A6932FE1E2E36A7D81E73326BAF93 /* Frameworks */ = {
+		4D95B727CDE0360DF4D0A9BB6C85D2BF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8B614FAD1112DE286EAF4175072D6470 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -44,6 +70,25 @@
 			path = "Target Support Files/Pods-CyhSessionExamp";
 			sourceTree = "<group>";
 		};
+		8978ECEB173C28733F19DBBF3F734161 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D6469747ED4C4BB9384098B883F0C3E2 /* CyhSession */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		9D6C081E78A306C05710716224CC0612 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				68809FB0FA60B75802333706C32B7291 /* CyhSession.xcconfig */,
+				2793AEA831E62F96AA8532617DDEFB7E /* CyhSession-dummy.m */,
+				F647650B8E5F812C20952594875BC49B /* CyhSession-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/CyhSession";
+			sourceTree = "<group>";
+		};
 		A4358192E9E65B24D74DF57DA4C4CC7F /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -52,10 +97,11 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		A9B1A76485944C7E705380BEE0635F3D /* Products */ = {
+		B0BEF94903575DE9E6BCA746BAA0A0D8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B9D3BF5CE5557CB0968CA85518671DAD /* libPods-CyhSessionExamp.a */,
+				DE0F9A90916C9E29B4C97BA640FA825C /* libCyhSession.a */,
+				BBDE3B08B59633B006A8AB014DDDC98E /* libPods-CyhSessionExamp.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -65,9 +111,21 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D89477F20FB1DE18A04690586D7808C4 /* Frameworks */,
-				A9B1A76485944C7E705380BEE0635F3D /* Products */,
+				8978ECEB173C28733F19DBBF3F734161 /* Pods */,
+				B0BEF94903575DE9E6BCA746BAA0A0D8 /* Products */,
 				A4358192E9E65B24D74DF57DA4C4CC7F /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		D6469747ED4C4BB9384098B883F0C3E2 /* CyhSession */ = {
+			isa = PBXGroup;
+			children = (
+				D9F5544BAEFE0F845037EBF833110B39 /* Cyhsession.h */,
+				6693A6002D4C462929CE96829A93E8A0 /* Cyhsession.m */,
+				9D6C081E78A306C05710716224CC0612 /* Support Files */,
+			);
+			name = CyhSession;
+			path = CyhSession;
 			sourceTree = "<group>";
 		};
 		D89477F20FB1DE18A04690586D7808C4 /* Frameworks */ = {
@@ -80,7 +138,15 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		198ACDA50727CD04FEB20E89A5E542C2 /* Headers */ = {
+		406792F4ED3F5D62F156F1FA85BD0CEA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C66967A918411546B2CD3B84F4C152DA /* Cyhsession.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C80E34BD60391A3F71913CB6C5605F2 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -90,21 +156,39 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		B0F8241A121A7FF23DCEF355562B1BAB /* Pods-CyhSessionExamp */ = {
+		661E120D8BDECE8FBA9A97968F48C23B /* CyhSession */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8B4353E14A46968747645E51E2900E4A /* Build configuration list for PBXNativeTarget "Pods-CyhSessionExamp" */;
+			buildConfigurationList = BAB98C2F74F21389AB3058820BB2CA10 /* Build configuration list for PBXNativeTarget "CyhSession" */;
 			buildPhases = (
-				198ACDA50727CD04FEB20E89A5E542C2 /* Headers */,
-				B2AF1F81751FCC0B20CFB112D7E80C3D /* Sources */,
-				DD6A6932FE1E2E36A7D81E73326BAF93 /* Frameworks */,
+				406792F4ED3F5D62F156F1FA85BD0CEA /* Headers */,
+				3B841C24BB2AE140BE8D089CFA13D866 /* Sources */,
+				8B614FAD1112DE286EAF4175072D6470 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
+			name = CyhSession;
+			productName = CyhSession;
+			productReference = DE0F9A90916C9E29B4C97BA640FA825C /* libCyhSession.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		8216B6979B2798A0A6F625D2AD2AAD19 /* Pods-CyhSessionExamp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3C831AAF2EC274DDD3E08E32FB11397A /* Build configuration list for PBXNativeTarget "Pods-CyhSessionExamp" */;
+			buildPhases = (
+				5C80E34BD60391A3F71913CB6C5605F2 /* Headers */,
+				2B5571B12574F2D83C9752BFE8C1A925 /* Sources */,
+				4D95B727CDE0360DF4D0A9BB6C85D2BF /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				99C8F1F32F67A41D9D5505AF5CC42225 /* PBXTargetDependency */,
+			);
 			name = "Pods-CyhSessionExamp";
 			productName = "Pods-CyhSessionExamp";
-			productReference = B9D3BF5CE5557CB0968CA85518671DAD /* libPods-CyhSessionExamp.a */;
+			productReference = BBDE3B08B59633B006A8AB014DDDC98E /* libPods-CyhSessionExamp.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -124,65 +208,65 @@
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = A9B1A76485944C7E705380BEE0635F3D /* Products */;
+			productRefGroup = B0BEF94903575DE9E6BCA746BAA0A0D8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B0F8241A121A7FF23DCEF355562B1BAB /* Pods-CyhSessionExamp */,
+				661E120D8BDECE8FBA9A97968F48C23B /* CyhSession */,
+				8216B6979B2798A0A6F625D2AD2AAD19 /* Pods-CyhSessionExamp */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		B2AF1F81751FCC0B20CFB112D7E80C3D /* Sources */ = {
+		2B5571B12574F2D83C9752BFE8C1A925 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C2476B6ED88C5211D83642EB354C4F0B /* Pods-CyhSessionExamp-dummy.m in Sources */,
+				04055DA50856247E926CB11A0186482C /* Pods-CyhSessionExamp-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B841C24BB2AE140BE8D089CFA13D866 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2B194FBE3DDD52A2B7E7BFCDDE71A90 /* CyhSession-dummy.m in Sources */,
+				5744B01CA95CC07DFFAB8FD5E63FC13F /* Cyhsession.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin XCBuildConfiguration section */
-		1C3A5B7F3C1F56D0928795F4CE6436F0 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = EF67D617CF05346F00745D969A77E83F /* Pods-CyhSessionExamp.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				MACH_O_TYPE = staticlib;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
+/* Begin PBXTargetDependency section */
+		99C8F1F32F67A41D9D5505AF5CC42225 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CyhSession;
+			target = 661E120D8BDECE8FBA9A97968F48C23B /* CyhSession */;
+			targetProxy = F16BF85CA018713E3A307A3FA83D4BEB /* PBXContainerItemProxy */;
 		};
-		644F0B24B8AFA1FCCAFA3FA79EBD8889 /* Release */ = {
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		7B0A6C1150ACBAA1AFE5981838A1BD81 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D45FE5FE4E091A4ADED4D0155A70A880 /* Pods-CyhSessionExamp.release.xcconfig */;
+			baseConfigurationReference = 68809FB0FA60B75802333706C32B7291 /* CyhSession.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/CyhSession/CyhSession-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				MACH_O_TYPE = staticlib;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = CyhSession;
+				PRODUCT_NAME = CyhSession;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -312,9 +396,84 @@
 			};
 			name = Debug;
 		};
+		99D4781072090F288C6801437F98494B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 68809FB0FA60B75802333706C32B7291 /* CyhSession.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/CyhSession/CyhSession-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = CyhSession;
+				PRODUCT_NAME = CyhSession;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BD52904651D1B8F76B22AC1F3F7E5992 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EF67D617CF05346F00745D969A77E83F /* Pods-CyhSessionExamp.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E3859776FDAA917F78CC27D84011F67D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D45FE5FE4E091A4ADED4D0155A70A880 /* Pods-CyhSessionExamp.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		3C831AAF2EC274DDD3E08E32FB11397A /* Build configuration list for PBXNativeTarget "Pods-CyhSessionExamp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD52904651D1B8F76B22AC1F3F7E5992 /* Debug */,
+				E3859776FDAA917F78CC27D84011F67D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -324,11 +483,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8B4353E14A46968747645E51E2900E4A /* Build configuration list for PBXNativeTarget "Pods-CyhSessionExamp" */ = {
+		BAB98C2F74F21389AB3058820BB2CA10 /* Build configuration list for PBXNativeTarget "CyhSession" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1C3A5B7F3C1F56D0928795F4CE6436F0 /* Debug */,
-				644F0B24B8AFA1FCCAFA3FA79EBD8889 /* Release */,
+				99D4781072090F288C6801437F98494B /* Debug */,
+				7B0A6C1150ACBAA1AFE5981838A1BD81 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

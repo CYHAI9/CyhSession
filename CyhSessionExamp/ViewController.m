@@ -62,6 +62,8 @@
         
         NSLog(@"存储路径：%@",path);
         
+    } Fail:^(NSError *error) {
+        NSLog(@"下载出错%@",error);
     }];
     
     

@@ -14,9 +14,9 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8216B6979B2798A0A6F625D2AD2AAD19"
-               BuildableName = "libPods-CyhSessionExamp.a"
-               BlueprintName = "Pods-CyhSessionExamp"
+               BlueprintIdentifier = "661E120D8BDECE8FBA9A97968F48C23B"
+               BuildableName = "libCyhSession.a"
+               BlueprintName = "CyhSession"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

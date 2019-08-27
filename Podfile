@@ -6,6 +6,6 @@ target 'CyhSessionExamp' do
   # use_frameworks!
 
   # Pods for CyhSessionExamp
-#  pod 'CyhSession'
+  pod 'CyhSession'
 
 end
